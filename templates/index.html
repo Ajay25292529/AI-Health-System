@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/predict" method="post">
+    <input type="text" name="name" placeholder="Patient Name" required>
+
+    <select name="disease">
+        <option value="diabetes">Diabetes</option>
+        <option value="heart">Heart Disease</option>
+    </select>
+
+    <h3>Enter Values (Diabetes: 8 values | Heart: 13 values)</h3>
+    <input type="text" name="pregnancies" placeholder="Pregnancies">
+    <input type="text" name="glucose" placeholder="Glucose">
+    <input type="text" name="bp" placeholder="Blood Pressure">
+    <input type="text" name="skin" placeholder="Skin Thickness">
+    <input type="text" name="insulin" placeholder="Insulin">
+    <input type="text" name="bmi" placeholder="BMI">
+    <input type="text" name="dpf" placeholder="Diabetes Pedigree">
+    <input type="text" name="age" placeholder="Age">
+
+    <button type="submit">Predict</button>
+</form>
+
+<a href="/dashboard">View Dashboard</a>
+{% endblock %}
